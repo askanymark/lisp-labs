@@ -8,7 +8,9 @@
 (setf *taylor-speak '(do i not like that))
 
 ;; corrected
-(setf *proper-speak 
-	(append
-		(list (first (rest *taylor-speak)) (first *taylor-speak))
+(setf *proper-speak (append (list (second *taylor-speak) (first *taylor-speak))
 		(member 'not *taylor-speak)))
+;; or
+(setf *proper-speak (append (list (first (rest *taylor-speak)))
+                            (list (first *taylor-speak))
+                            (rest (rest *taylor-speak))))
