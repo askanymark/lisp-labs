@@ -46,3 +46,11 @@
 ;; get bedroom features
 (defun get-bedroom-features (association-list)
   (second (assoc 'features (second (get-room 'bedroom association-list)))))
+
+; get garden info
+(defun get-garden (association-list)
+  (second (assoc 'garden association-list)))
+
+;; get type
+(defun get-type (association-list)
+  (second (assoc 'type association-list)))
